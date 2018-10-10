@@ -1,0 +1,25 @@
+{
+  "name": "stringcalculator",
+  "version": "1.0.0",
+  "description": "StringCalculator TDD assignment for HR 2018",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HjorturJ/StringCalculator.git"
+  },
+  "keywords": [
+    "StringCalculator"
+  ],
+  "author": "Hjortur Johann V",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HjorturJ/StringCalculator/issues"
+  },
+  "homepage": "https://github.com/HjorturJ/StringCalculator#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
