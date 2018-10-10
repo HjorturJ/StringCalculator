@@ -1,4 +1,4 @@
-const add = require("./StringCalc");
+const add = require("./src/StringCalc");
 
 it("should return 0 when given an empty string", () => {
 	expect(add("")).toBe(0);
