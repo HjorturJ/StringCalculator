@@ -5,8 +5,8 @@ function add(numbers) {
 		return 0;
 	}
 
-	if(numbers.includes(",")) {
-		var numberArr = numbers.split(",");
+	if(numbers.includes(",") || numbers.includes("\n")) {
+		var numberArr = numbers.split(/[\n,]/); //Regexp expression
 		return sum(numberArr);
 	}
 	else {

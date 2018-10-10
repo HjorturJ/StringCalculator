@@ -15,3 +15,7 @@ it("should return the sum of 2 numbers it is given, if it is given 2 numbers", (
 it("should return the sum of all numbers it is given, if it is given 2 or more numbers", () => {
 	expect(add("2,4,4,5")).toBe(15);
 });
+
+it("should return the sum of all numbers, even with new delimiter", () => {
+	expect(add("2,4\n4\n5,5")).toBe(20);
+});
