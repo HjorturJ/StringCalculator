@@ -19,3 +19,10 @@ it("should return the sum of all numbers it is given, if it is given 2 or more n
 it("should return the sum of all numbers, even with new delimiter", () => {
 	expect(add("2,4\n4\n5,5")).toBe(20);
 });
+
+it("should throw an error if a negative number is given as an agrumnet", () => {
+	function testCheckForNegatives() {
+		add("2,-2\n-4,-6");
+	}
+	expect(testCheckForNegatives).toThrow(/^Negatives not allowed: -2,-4,-6$/);
+});
