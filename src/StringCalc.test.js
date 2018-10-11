@@ -26,3 +26,11 @@ it("should throw an error if a negative number is given as an agrumnet", () => {
 	}
 	expect(testCheckForNegatives).toThrow(/^Negatives not allowed: -2,-4,-6$/);
 });
+
+it("should return the sum of all numbers it is given, ignoring all numbers above 1000, resulting in 10", () => {
+	expect(add("1,4,1001,5\n1005")).toBe(10);
+});
+
+it("should return the sum of all numbers it is given, ignoring all numbers above 1000, resulting in 915", () => {
+	expect(add("1,4,1001,5\n905")).toBe(915);
+});
