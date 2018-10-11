@@ -6,7 +6,8 @@ function add(numbers) {
 	}
 
 	if(numbers.includes(",") || numbers.includes("\n")) {
-		var numberArr = numbers.split(/[\n,]/); //Regexp expression
+		var delimiterRegex = getDelimeters(numbers);
+		var numberArr = numbers.split(delimiterRegex); //Regexp expression
 		checkForNegatives(numberArr);
 		return sum(numberArr);
 	}
@@ -14,6 +15,19 @@ function add(numbers) {
 		return parseInt(numbers);
 	}
 }
+
+function getDelimeters(numbers) {
+	if(numbers[0] == "/" && numbers[1] == "/") {
+		var userDelimeter = numbers[2];
+		var allDelimiters = "[\n," + userDelimeter + "]";
+		var delimiterRegex = new RegExp(allDelimiters);
+	} 
+	else {
+		var delimiterRegex = new RegExp("[\n,]");
+	}
+	return delimiterRegex;
+}
+
 
 function sum(numberArr) {
 	var sum = 0;

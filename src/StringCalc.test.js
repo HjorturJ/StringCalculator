@@ -16,7 +16,7 @@ it("should return the sum of all numbers it is given, if it is given 2 or more n
 	expect(add("2,4,4,5")).toBe(15);
 });
 
-it("should return the sum of all numbers, even with new delimiter", () => {
+it("should return the sum of all numbers, even with new delimiter \\n", () => {
 	expect(add("2,4\n4\n5,5")).toBe(20);
 });
 
@@ -31,6 +31,14 @@ it("should return the sum of all numbers it is given, ignoring all numbers above
 	expect(add("1,4,1001,5\n1005")).toBe(10);
 });
 
-it("should return the sum of all numbers it is given, ignoring all numbers above 1000, resulting in 915", () => {
-	expect(add("1,4,1001,5\n905")).toBe(915);
+it("should return the sum of all numbers it is given, ignoring all numbers above 1000, resulting in 1915", () => {
+	expect(add("0,5,1001,1000,5\n905")).toBe(1915);
+});
+
+it("should return the sum of all numbers, even with custom delimiters, in this case ;", () => {
+	expect(add("//;\n5,5\n5;5")).toBe(20);
+});
+
+it("should return the sum of all numbers, even with custom delimiters, in this case +", () => {
+	expect(add("//+\n5,6\n6+5")).toBe(22);
 });
